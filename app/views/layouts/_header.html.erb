@@ -34,6 +34,8 @@
           <li><button type="button" class="btn btn-default navbar-btn btn-sm">Sign in</button></li>
         <% end %> -->
         <%if user_signed_in? %>
+          <li><%= link_to "New Pin", new_pin_path %></li>
+          <li><%= link_to "Account Settings", edit_user_registration_path %></li>
           <li><%= button_to "Log out", destroy_user_session_path, method: :delete, class:"btn btn-primary navbar-btn btn-sm"%></li>
         <%else %>
           <li><%= button_to "Log in", new_user_session_path, method: "get", class:"btn btn-default navbar-btn btn-sm" %></li>
